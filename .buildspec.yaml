@@ -1,6 +1,6 @@
 version: 0.2
 phases:
-  pre-build:
+  pre_build:
     runtime-versions:
       java: openjdk8
     commands:
@@ -9,7 +9,7 @@ phases:
     commands:
       - echo "Entered build phase"
       - mvn clean prepare-package war:explore
-  post-build:
+  post_build:
     commands:
       - echo "Enter post build state"
       - mv target/deploy ./
